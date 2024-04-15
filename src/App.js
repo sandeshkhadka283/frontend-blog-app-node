@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Posts from './components/Posts';
+import AddPost from './components/addPost';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        axios.get('/posts')
+            .then(response => setPosts(response.data))
+            .catch(error => console.error('Error fetching posts:', error));
+    }, []);
+
+    const addPostHandler = (post) => {
+        setPosts(prevPosts => [post, ...prevPosts]);
+    };
+
+    return (
+        <div>
+            <AddPost onAddPost={addPostHandler} />
+            <Posts posts={posts} />
+        </div>
+    );
 }
 
 export default App;
