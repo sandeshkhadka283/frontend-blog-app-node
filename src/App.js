@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Posts from './components/Posts';
 import AddPost from './components/addPost';
+import LandingPage from './components/landingPage';
+
 
 function App() {
     const [posts, setPosts] = useState([]);
@@ -19,8 +21,8 @@ function App() {
 
     return (
         <div>
-            <AddPost onAddPost={addPostHandler} />
-            <Posts posts={posts} />
+            <LandingPage/>
+          
         </div>
     );
 }

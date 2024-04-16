@@ -1,0 +1,162 @@
+/* src/components/LandingPage.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+    background: #f7f7f7;
+    min-height: 100vh;
+  }
+  
+  .profileContainer {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 750px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profileContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profileImage {
+    background-color: #ddd;
+    border-radius: 50%;
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 20px auto 30px;
+    background-image: url(/public/profileimage.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .profileStats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-size: 1em;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .profileBio {
+    font-size: 1rem;
+    margin-top: 30px;
+    color: #666;
+  }
+  
+  .sidebar {
+    margin-bottom: 20px;
+  }
+  
+ 
+  .navLink:hover, .navLink.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+
+
+
+
+ .navLink.active {
+  background-color: #0056b3;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ... other styles ... */
+
+
+  
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      text-align: left;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  
+    .sidebar {
+      flex: 1;
+      max-width: 200px;
+      margin-right: 40px;
+      align-self: flex-start;
+    }
+  
+    .profileContainer {
+      flex: 3;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ... other styles ... */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    width: 100%; /* Full width to the container */
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+  }
+  
+  .navLink:hover, .navLink.active {
+    background-color: #0056b3;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  
+  /* ... other styles ... */
+  
+  @media (min-width: 768px) {
+    .sidebar {
+      align-items: flex-start; /* Align items to the start on larger screens */
+    }
+  
+    .navLink {
+      text-align: left; /* Align text to the left on larger screens */
+    }
+  
+    /* ... other styles ... */
+  }
+  
