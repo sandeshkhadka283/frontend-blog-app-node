@@ -18,7 +18,7 @@ function Posts({ initialPosts = [] }) {
     }, []);  // Empty dependency array ensures this runs only once on mount
 
     const fetchPosts = () => {
-        axios.get(`${API_BASE_URL}/api/posts`)  // Corrected URL concatenation
+        axios.get(`${API_BASE_URL}api/posts`)  // Corrected URL concatenation
             .then(response => {
                 setPosts(response.data || []);  // Set posts if data is available
             })
