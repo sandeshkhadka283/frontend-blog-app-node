@@ -11,7 +11,7 @@ function AddPost({ onAddPost }) {
         event.preventDefault();
         try {
             const postData = { title, content };
-            const response = await axios.post('/posts', postData);
+            const response = await axios.post('http://localhost:3000/posts/createpost', postData);
             onAddPost(response.data); // Add to posts list immediately
             setTitle('');
             setContent('');
